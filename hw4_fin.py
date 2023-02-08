@@ -76,17 +76,33 @@ your code to fulfill the requirements for this assignment.
 
 def fv():
     # START: Your Code here
+    PV = float(input("Please enter PV: "))
+    r = float(input("Please enter r: "))
+    n = float(input("Please enter n: "))
+    fv = PV * (1 + r) ** n
+    FV_expected = "Your expected Future Value is: $" + str(round(fv, 2))
+    print(FV_expected)
     pass
     # END: Your code here
 
 def pv():
     # START: Your code here
+    FV = float(input("Please enter FV: "))
+    r = float(input("Please enter r: "))
+    n = float(input("Please enter n: "))
+    PV = FV / (1 + r) ** n
+    PV_expected = "Your expected Payment Value is: $" + str(round(PV, 2))
+    print(PV_expected)
     pass
     # END: Your code here
 
 def pmt(PV, r, n):
     # START: Your code here
     print(PV, r, n)
+    pmt = (r * PV) / (1 - (1 + r) ** -n)
+    print(pmt)
+    #pmt_expected = "Your expected Payment is: $" + str(round(pmt))
+    #print(pmt_expected)
     pass
     # END: Your code here
 
